@@ -5,7 +5,7 @@ import httpProxy from "http-proxy";
 const app = express()
 const PORT = 8000
 
-const BASE_PATH = 'http://localhost:9000/swiftserve/dist'
+const BASE_PATH = 'http://34.70.88.177:9000/swiftserve/dist'
 
 const proxy = httpProxy.createProxy()
 
