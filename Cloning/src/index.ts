@@ -6,8 +6,11 @@ import { createClient } from "redis";
 import { getAllFiles } from "./getFiles";
 import path from "path";
 import { uploadFile } from "./Upload_file";
-const publisher = createClient();
+const publisher = createClient({
+  url: 'redis://34.27.85.70:6379',
+});
 publisher.connect();
+publisher.on('error', err => console.error(err));
 
 const app = express()
 app.use(cors());
@@ -23,15 +26,13 @@ app.post("/deploy",async (req,res)=>{
 console.log(files);
 
 for (const file of files) {
-    // console.log(file.slice(__dirname.length + 1).replace(/\\/g, '/'));
+    console.log(file.slice(__dirname.length + 1).replace(/\\/g, '/'));
     await uploadFile(file.slice(__dirname.length + 1).replace(/\\/g, '/'), file);
 }
  publisher.lPush("Build-Queue",id);
 res.json({
   "id":id
  });
- 
- 
 
 })
 app.get('/', (req:any, res:any) => {

@@ -3,7 +3,8 @@ import { copyFinalDist, downloadS3Folder } from "./Minio";
 import { buildProject } from "./build";
 
 
-const subscriber = createClient();
+const subscriber = createClient({
+    url: 'redis://127.0.0.1:6379'});
 subscriber.on('connect', () => {
     console.log('Subscriber connected to Redis server');
 });

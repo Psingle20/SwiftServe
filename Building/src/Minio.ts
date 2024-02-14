@@ -7,10 +7,10 @@ import mimeTypes from "mime-types";
 const s3Client = new S3Client({
     region: 'us-east-1', // Replace with your desired region
     credentials: {
-        accessKeyId: "jUUS3Pw2zonvV4w3RSNn",
-        secretAccessKey: "TTJTLYea0la1f4MAFBMPgeVYPtJWqhfpYser6LlY"
+        accessKeyId: "Fiy8g1zSzb1RkGRlgc6v",
+        secretAccessKey: "Gx7IX5SNlT7fLpAiMPDCTukRtTi7aZvpKc0OnZhU"
     },
-    endpoint: 'http://127.0.0.1:9000', // Replace with your MinIO server address
+    endpoint: 'http://34.70.88.177:9000/', // Replace with your MinIO server address
     tls: false // Ensure SSL is explicitly disabled
 });
 
