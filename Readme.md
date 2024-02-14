@@ -5,4 +5,4 @@ A brief description of what this project does and who it's for Thsi project demo
 Necessary software requirements
 
 Minio S3 bucket
-Redis-cl
+Redis-cli
