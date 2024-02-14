@@ -7,7 +7,7 @@ import { getAllFiles } from "./getFiles";
 import path from "path";
 import { uploadFile } from "./Upload_file";
 const publisher = createClient({
-  url: 'redis://127.0.0.1:6379',
+  url: 'redis://34.27.85.70:6379',
 });
 publisher.connect();
 publisher.on('error', err => console.error(err));
