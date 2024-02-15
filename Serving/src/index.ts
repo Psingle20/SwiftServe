@@ -12,13 +12,13 @@ const proxy = httpProxy.createProxy()
 app.use((req, res) => {
     const hostname = req.hostname;
     const subdomain = hostname.split('.')[0];
-  
-
+    console.log("HOSTNAME", hostname)
 
     // Custom Domain - DB Query
-    console.log(subdomain);
+    console.log("SUBDOMAIN", subdomain);
 
     const resolvesTo = `${BASE_PATH}/${subdomain}`;
+    console.log("RESOLVES TO", resolvesTo)  
 
     return proxy.web(req, res, { target: resolvesTo, changeOrigin: true })
 
@@ -26,6 +26,8 @@ app.use((req, res) => {
 
 proxy.on('proxyReq', (proxyReq, req, res) => {
     const url = req.url;
+    console.log(proxyReq.path + 'index.html')
+    console.log("URL", url);
    
     if (url === '/')
         proxyReq.path += 'index.html'
