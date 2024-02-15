@@ -4,7 +4,7 @@ FROM node:18-alpine
 # Set working directory
 WORKDIR /app
 
-# Copy package.json
+# Copy package.json and package-lock.json
 COPY package*.json ./
 COPY tsconfig.json ./
 

@@ -4,7 +4,7 @@ FROM node:18-alpine
 # Set working directory
 WORKDIR /app
 
-# Copy package.json
+# Copy package.json and package-lock.json
 COPY package*.json ./
 COPY tsconfig.json ./
 
@@ -23,7 +23,7 @@ COPY src/* .
 RUN tsc -b
 
 # Expose Node.js port (adjust if needed)
-EXPOSE 3000
+EXPOSE 8000
 
 # Start the server
 CMD ["node", "dist/index.js"]
