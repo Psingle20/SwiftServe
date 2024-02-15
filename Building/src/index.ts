@@ -4,7 +4,7 @@ import { buildProject } from "./build";
 
 
 const subscriber = createClient({
-    url: 'redis://127.0.0.1:6379'});
+    url: 'redis://34.27.85.70:6379'});
 subscriber.on('connect', () => {
     console.log('Subscriber connected to Redis server');
 });
