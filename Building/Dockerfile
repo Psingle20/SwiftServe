@@ -2,7 +2,7 @@
 FROM node:18-alpine
 
 # Set working directory
-WORKDIR /app
+WORKDIR /abcd
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
@@ -10,6 +10,7 @@ COPY tsconfig.json ./
 
 # Install dependencies
 RUN npm install
+RUN npm install mime-types
 RUN npm install -g typescript
 RUN tsc --version
 
