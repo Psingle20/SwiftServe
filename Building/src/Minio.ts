@@ -82,8 +82,12 @@ const getAllFiles = (folderPath: string) => {
     return response;
 }
 export const uploadFile = async (fileName: string, localFilePath: string) => {
+    // localFilePath = "C:\Users\ingle\Desktop" + localFilePath;
     const fileContent = readFileSync(localFilePath);
-    const contentType = mimeTypes.contentType(localFilePath) || "application/octet-stream";
+    const contentType = mimeTypes.lookup(localFilePath) || "application/octet-stream";
+    console.log("FILE NAME: ", fileName);
+    console.log("LOCAL FILE PATH: ", localFilePath);
+    console.log("CONTENT TYPE: ", contentType);
     
     try {
         const params = {

@@ -2,14 +2,15 @@
 FROM node:18-alpine
 
 # Set working directory
-WORKDIR /app
+WORKDIR /abcd
 
-# Copy package.json
+# Copy package.json and package-lock.json
 COPY package*.json ./
 COPY tsconfig.json ./
 
 # Install dependencies
 RUN npm install
+RUN npm install mime-types
 RUN npm install -g typescript
 RUN tsc --version
 
@@ -23,7 +24,7 @@ COPY src/* .
 RUN tsc -b
 
 # Expose Node.js port (adjust if needed)
-EXPOSE 3000
+EXPOSE 3001
 
 # Start the server
 CMD ["node", "dist/index.js"]
