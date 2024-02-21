@@ -1,6 +1,6 @@
 SwiftServe
 
-This project demonstrates allows the user to deploy a static website on internet
+This project allows the user to deploy a static website on internet
 
 Necessary software requirements
 
