@@ -1,9 +1,1 @@
-SwiftServe
-
-This project demonstrates allows the user to deploy a static website on internet
-
-Necessary software requirements
-
-Minio S3 bucket
-
-Redis-cli
+Added config files for all resources deployed on the Kubernetes cluster.
