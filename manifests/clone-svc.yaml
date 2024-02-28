@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    cloud.google.com/neg: '{"ingress":true}'
+  creationTimestamp: "2024-02-15T02:43:51Z"
+  finalizers:
+  - service.kubernetes.io/load-balancer-cleanup
+  labels:
+    app: swiftserve-cloning
+  name: swiftserve-cloning
+  namespace: default
+  resourceVersion: "373641"
+  uid: a923621d-4d41-4acb-a9b7-075da2cf3f91
+spec:
+  allocateLoadBalancerNodePorts: true
+  clusterIP: 10.8.13.123
+  clusterIPs:
+  - 10.8.13.123
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 30833
+    port: 3000
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    app: swiftserve-cloning
+  sessionAffinity: None
+  type: LoadBalancer
+status:
+  loadBalancer:
+    ingress:
+    - ip: 35.192.5.136

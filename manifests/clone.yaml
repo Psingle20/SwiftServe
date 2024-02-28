@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: "2024-02-15T03:12:23Z"
+  generation: 1
+  labels:
+    app: swiftserve-cloning
+  name: swiftserve-cloning
+  namespace: default
+  resourceVersion: "2623581"
+  uid: 4e21caec-5da1-437d-8231-4b6cd14c09f7
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: swiftserve-cloning
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: swiftserve-cloning
+    spec:
+      containers:
+      - image: shabbirdocks/swiftserve-clones-stuff:2
+        imagePullPolicy: IfNotPresent
+        name: swiftserve-clones-stuff
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2024-02-15T03:12:23Z"
+    lastUpdateTime: "2024-02-15T03:12:33Z"
+    message: ReplicaSet "swiftserve-cloning-84ddfb79b8" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  - lastTransitionTime: "2024-02-18T09:03:04Z"
+    lastUpdateTime: "2024-02-18T09:03:04Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  observedGeneration: 1
+  readyReplicas: 1
+  replicas: 1
+  updatedReplicas: 1

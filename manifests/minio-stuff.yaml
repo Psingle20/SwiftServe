@@ -1,0 +1,3202 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2024-02-15T14:03:37Z"
+    generateName: my-deployment-50000-5456c9767-
+    labels:
+      app: metrics
+      department: engineering
+      pod-template-hash: 5456c9767
+    name: my-deployment-50000-5456c9767-2tgws
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: my-deployment-50000-5456c9767
+      uid: 3f8c6e65-1c62-4921-8f02-145a3b72a16f
+    resourceVersion: "694322"
+    uid: d2084b6e-ff40-4010-a368-3fabb9b13da1
+  spec:
+    containers:
+    - env:
+      - name: PORT
+        value: "50000"
+      image: us-docker.pkg.dev/google-samples/containers/gke/hello-app:2.0
+      imagePullPolicy: IfNotPresent
+      name: hello
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-8hfn7
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-swiftserve-cluster-default-pool-c6c42e3e-bqp4
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-8hfn7
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-15T14:03:37Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-15T14:03:39Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-15T14:03:39Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-15T14:03:37Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://fb6c2f6a2bae69ac02511cc5486e06b8cdde19116fa854969d76e1a89f5ebfb6
+      image: us-docker.pkg.dev/google-samples/containers/gke/hello-app:2.0
+      imageID: us-docker.pkg.dev/google-samples/containers/gke/hello-app@sha256:7104356ed4e3476a96a23b96f8d7c04dfa7a1881aa97d66a76217f6bc8a370d0
+      lastState: {}
+      name: hello
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2024-02-15T14:03:38Z"
+    hostIP: 10.128.15.225
+    phase: Running
+    podIP: 10.4.2.10
+    podIPs:
+    - ip: 10.4.2.10
+    qosClass: BestEffort
+    startTime: "2024-02-15T14:03:37Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2024-02-15T14:03:37Z"
+    generateName: my-deployment-50000-5456c9767-
+    labels:
+      app: metrics
+      department: engineering
+      pod-template-hash: 5456c9767
+    name: my-deployment-50000-5456c9767-czgf2
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: my-deployment-50000-5456c9767
+      uid: 3f8c6e65-1c62-4921-8f02-145a3b72a16f
+    resourceVersion: "694321"
+    uid: 98ba78c7-59c6-446f-98ea-d8de557a9516
+  spec:
+    containers:
+    - env:
+      - name: PORT
+        value: "50000"
+      image: us-docker.pkg.dev/google-samples/containers/gke/hello-app:2.0
+      imagePullPolicy: IfNotPresent
+      name: hello
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-2f49x
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-swiftserve-cluster-default-pool-c6c42e3e-0jbz
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-2f49x
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-15T14:03:37Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-15T14:03:39Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-15T14:03:39Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-15T14:03:37Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://81378fa282df8810a3424f010b9c4e0c6c309bd748e591eba4570a568ff5eaf5
+      image: us-docker.pkg.dev/google-samples/containers/gke/hello-app:2.0
+      imageID: us-docker.pkg.dev/google-samples/containers/gke/hello-app@sha256:7104356ed4e3476a96a23b96f8d7c04dfa7a1881aa97d66a76217f6bc8a370d0
+      lastState: {}
+      name: hello
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2024-02-15T14:03:38Z"
+    hostIP: 10.128.15.224
+    phase: Running
+    podIP: 10.4.1.20
+    podIPs:
+    - ip: 10.4.1.20
+    qosClass: BestEffort
+    startTime: "2024-02-15T14:03:37Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2024-02-15T14:03:37Z"
+    generateName: my-deployment-50000-5456c9767-
+    labels:
+      app: metrics
+      department: engineering
+      pod-template-hash: 5456c9767
+    name: my-deployment-50000-5456c9767-zhsgz
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: my-deployment-50000-5456c9767
+      uid: 3f8c6e65-1c62-4921-8f02-145a3b72a16f
+    resourceVersion: "694319"
+    uid: 6718ab6c-9adf-44ca-a2b9-5c4442d74405
+  spec:
+    containers:
+    - env:
+      - name: PORT
+        value: "50000"
+      image: us-docker.pkg.dev/google-samples/containers/gke/hello-app:2.0
+      imagePullPolicy: IfNotPresent
+      name: hello
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-5wtpd
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-swiftserve-cluster-default-pool-c6c42e3e-rrzz
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-5wtpd
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-15T14:03:37Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-15T14:03:39Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-15T14:03:39Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-15T14:03:37Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://b6fa37c5ee5f36371ab3a3e1ffcedb44a2e55d9cca1ae5aff5c353726de2f373
+      image: us-docker.pkg.dev/google-samples/containers/gke/hello-app:2.0
+      imageID: us-docker.pkg.dev/google-samples/containers/gke/hello-app@sha256:7104356ed4e3476a96a23b96f8d7c04dfa7a1881aa97d66a76217f6bc8a370d0
+      lastState: {}
+      name: hello
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2024-02-15T14:03:38Z"
+    hostIP: 10.128.15.223
+    phase: Running
+    podIP: 10.4.0.18
+    podIPs:
+    - ip: 10.4.0.18
+    qosClass: BestEffort
+    startTime: "2024-02-15T14:03:37Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2024-02-14T16:31:41Z"
+    generateName: redis-commander-b8df779c5-
+    labels:
+      app: redis-commander
+      pod-template-hash: b8df779c5
+      tier: backend
+    name: redis-commander-b8df779c5-p7xss
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: redis-commander-b8df779c5
+      uid: 611af12e-fb70-4be1-884b-eecb71b5d740
+    resourceVersion: "82964"
+    uid: 099ed17c-2132-46d6-a011-186d77754c1b
+  spec:
+    automountServiceAccountToken: false
+    containers:
+    - env:
+      - name: REDIS_HOST
+        value: redis-1669709819-master
+      - name: K8S_SIGTERM
+        value: "1"
+      image: rediscommander/redis-commander
+      imagePullPolicy: Always
+      livenessProbe:
+        failureThreshold: 3
+        httpGet:
+          path: /favicon.png
+          port: 8081
+          scheme: HTTP
+        initialDelaySeconds: 10
+        periodSeconds: 10
+        successThreshold: 1
+        timeoutSeconds: 5
+      name: redis-commander
+      ports:
+      - containerPort: 8081
+        name: redis-commander
+        protocol: TCP
+      resources:
+        limits:
+          cpu: 500m
+          memory: 512M
+        requests:
+          cpu: 500m
+          memory: 512M
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+          - ALL
+        readOnlyRootFilesystem: false
+        runAsNonRoot: true
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-swiftserve-cluster-default-pool-c6c42e3e-wqcs
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-14T16:31:42Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-14T16:31:47Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-14T16:31:47Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-14T16:31:41Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://78c0709d7e10ed45fca9e7131c22b490f83e415255d0741bc5871bf27d9da1c1
+      image: docker.io/rediscommander/redis-commander:latest
+      imageID: docker.io/rediscommander/redis-commander@sha256:19cd0c49f418779fa2822a0496c5e6516d0c792effc39ed20089e6268477e40a
+      lastState: {}
+      name: redis-commander
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2024-02-14T16:31:46Z"
+    hostIP: 10.128.15.226
+    phase: Running
+    podIP: 10.4.3.6
+    podIPs:
+    - ip: 10.4.3.6
+    qosClass: Guaranteed
+    startTime: "2024-02-14T16:31:42Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      checksum/configmap: 86bcc953bb473748a3d3dc60b7c11f34e60c93519234d4c37f42e22ada559d47
+      checksum/health: aff24913d801436ea469d8d374b2ddb3ec4c43ee7ab24663d5f8ff1a1b6991a9
+      checksum/scripts: 18fa126fe0e9546f7015a6ef8d00ee6ff27ca3f6d4d4fb2da75adbfeaa08a912
+      checksum/secret: 44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a
+    creationTimestamp: "2024-02-14T16:35:04Z"
+    generateName: swift-redis-master-
+    labels:
+      app.kubernetes.io/component: master
+      app.kubernetes.io/instance: swift-redis
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: redis
+      app.kubernetes.io/version: 7.2.4
+      controller-revision-hash: swift-redis-master-7d99f479b
+      helm.sh/chart: redis-18.13.0
+      statefulset.kubernetes.io/pod-name: swift-redis-master-0
+    name: swift-redis-master-0
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: StatefulSet
+      name: swift-redis-master
+      uid: 9add9b4b-1c1e-45e7-ab66-824600c073a7
+    resourceVersion: "84976"
+    uid: d7d73fb1-a5dc-48c7-803b-531c972f3957
+  spec:
+    affinity:
+      podAntiAffinity:
+        preferredDuringSchedulingIgnoredDuringExecution:
+        - podAffinityTerm:
+            labelSelector:
+              matchLabels:
+                app.kubernetes.io/component: master
+                app.kubernetes.io/instance: swift-redis
+                app.kubernetes.io/name: redis
+            topologyKey: kubernetes.io/hostname
+          weight: 1
+    automountServiceAccountToken: false
+    containers:
+    - args:
+      - -c
+      - /opt/bitnami/scripts/start-scripts/start-master.sh
+      command:
+      - /bin/bash
+      env:
+      - name: BITNAMI_DEBUG
+        value: "false"
+      - name: REDIS_REPLICATION_MODE
+        value: master
+      - name: ALLOW_EMPTY_PASSWORD
+        value: "yes"
+      - name: REDIS_TLS_ENABLED
+        value: "no"
+      - name: REDIS_PORT
+        value: "6379"
+      image: docker.io/bitnami/redis:7.2.4-debian-11-r5
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        exec:
+          command:
+          - sh
+          - -c
+          - /health/ping_liveness_local.sh 5
+        failureThreshold: 5
+        initialDelaySeconds: 20
+        periodSeconds: 5
+        successThreshold: 1
+        timeoutSeconds: 6
+      name: redis
+      ports:
+      - containerPort: 6379
+        name: redis
+        protocol: TCP
+      readinessProbe:
+        exec:
+          command:
+          - sh
+          - -c
+          - /health/ping_readiness_local.sh 1
+        failureThreshold: 5
+        initialDelaySeconds: 20
+        periodSeconds: 5
+        successThreshold: 1
+        timeoutSeconds: 2
+      resources: {}
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+          - ALL
+        runAsGroup: 0
+        runAsNonRoot: true
+        runAsUser: 1001
+        seccompProfile:
+          type: RuntimeDefault
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /opt/bitnami/scripts/start-scripts
+        name: start-scripts
+      - mountPath: /health
+        name: health
+      - mountPath: /data
+        name: redis-data
+      - mountPath: /opt/bitnami/redis/mounted-etc
+        name: config
+      - mountPath: /opt/bitnami/redis/etc/
+        name: redis-tmp-conf
+      - mountPath: /tmp
+        name: tmp
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    hostname: swift-redis-master-0
+    nodeName: gke-swiftserve-cluster-default-pool-c6c42e3e-0jbz
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext:
+      fsGroup: 1001
+      fsGroupChangePolicy: Always
+    serviceAccount: swift-redis-master
+    serviceAccountName: swift-redis-master
+    subdomain: swift-redis-headless
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: redis-data
+      persistentVolumeClaim:
+        claimName: redis-data-swift-redis-master-0
+    - configMap:
+        defaultMode: 493
+        name: swift-redis-scripts
+      name: start-scripts
+    - configMap:
+        defaultMode: 493
+        name: swift-redis-health
+      name: health
+    - configMap:
+        defaultMode: 420
+        name: swift-redis-configuration
+      name: config
+    - emptyDir: {}
+      name: redis-tmp-conf
+    - emptyDir: {}
+      name: tmp
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-14T16:35:04Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-14T16:35:50Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-14T16:35:50Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-14T16:35:04Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://b89fdaf3552553b7b253fa3cfed0b8b117219b6392d8c72c6e3acdb7eeb35e13
+      image: docker.io/bitnami/redis:7.2.4-debian-11-r5
+      imageID: docker.io/bitnami/redis@sha256:cdbfc8ca8e9c0b89ffb13a6786761a5e6fd689c7e27d658dfad57110ba63474d
+      lastState: {}
+      name: redis
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2024-02-14T16:35:25Z"
+    hostIP: 10.128.15.224
+    phase: Running
+    podIP: 10.4.1.7
+    podIPs:
+    - ip: 10.4.1.7
+    qosClass: BestEffort
+    startTime: "2024-02-14T16:35:04Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      checksum/configmap: 86bcc953bb473748a3d3dc60b7c11f34e60c93519234d4c37f42e22ada559d47
+      checksum/health: aff24913d801436ea469d8d374b2ddb3ec4c43ee7ab24663d5f8ff1a1b6991a9
+      checksum/scripts: dee2d034adb72e701b84da218f72bcdeecef78ba9da9adef2b82f802727009cb
+      checksum/secret: 0b0ac6029508d722fd94225e93ae2f559d441ae45d824ecc3db8721b4fa3ea2d
+    creationTimestamp: "2024-02-14T16:09:45Z"
+    generateName: swift-redis-replicas-
+    labels:
+      app.kubernetes.io/component: replica
+      app.kubernetes.io/instance: swift-redis
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: redis
+      app.kubernetes.io/version: 7.2.4
+      controller-revision-hash: swift-redis-replicas-5556667c5b
+      helm.sh/chart: redis-18.13.0
+      statefulset.kubernetes.io/pod-name: swift-redis-replicas-0
+    name: swift-redis-replicas-0
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: StatefulSet
+      name: swift-redis-replicas
+      uid: 77d97206-85f1-4639-ae3a-054195476425
+    resourceVersion: "87353"
+    uid: a530813f-946b-44bc-9057-0f59da8edc10
+  spec:
+    affinity:
+      podAntiAffinity:
+        preferredDuringSchedulingIgnoredDuringExecution:
+        - podAffinityTerm:
+            labelSelector:
+              matchLabels:
+                app.kubernetes.io/component: replica
+                app.kubernetes.io/instance: swift-redis
+                app.kubernetes.io/name: redis
+            topologyKey: kubernetes.io/hostname
+          weight: 1
+    automountServiceAccountToken: false
+    containers:
+    - args:
+      - -c
+      - /opt/bitnami/scripts/start-scripts/start-replica.sh
+      command:
+      - /bin/bash
+      env:
+      - name: BITNAMI_DEBUG
+        value: "false"
+      - name: REDIS_REPLICATION_MODE
+        value: replica
+      - name: REDIS_MASTER_HOST
+        value: swift-redis-master-0.swift-redis-headless.default.svc.cluster.local
+      - name: REDIS_MASTER_PORT_NUMBER
+        value: "6379"
+      - name: ALLOW_EMPTY_PASSWORD
+        value: "no"
+      - name: REDIS_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            key: redis-password
+            name: swift-redis
+      - name: REDIS_MASTER_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            key: redis-password
+            name: swift-redis
+      - name: REDIS_TLS_ENABLED
+        value: "no"
+      - name: REDIS_PORT
+        value: "6379"
+      image: docker.io/bitnami/redis:7.2.4-debian-11-r5
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        exec:
+          command:
+          - sh
+          - -c
+          - /health/ping_liveness_local_and_master.sh 5
+        failureThreshold: 5
+        initialDelaySeconds: 20
+        periodSeconds: 5
+        successThreshold: 1
+        timeoutSeconds: 6
+      name: redis
+      ports:
+      - containerPort: 6379
+        name: redis
+        protocol: TCP
+      readinessProbe:
+        exec:
+          command:
+          - sh
+          - -c
+          - /health/ping_readiness_local_and_master.sh 1
+        failureThreshold: 5
+        initialDelaySeconds: 20
+        periodSeconds: 5
+        successThreshold: 1
+        timeoutSeconds: 2
+      resources: {}
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+          - ALL
+        runAsGroup: 0
+        runAsNonRoot: true
+        runAsUser: 1001
+        seccompProfile:
+          type: RuntimeDefault
+      startupProbe:
+        failureThreshold: 22
+        initialDelaySeconds: 10
+        periodSeconds: 10
+        successThreshold: 1
+        tcpSocket:
+          port: redis
+        timeoutSeconds: 5
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /opt/bitnami/scripts/start-scripts
+        name: start-scripts
+      - mountPath: /health
+        name: health
+      - mountPath: /data
+        name: redis-data
+      - mountPath: /opt/bitnami/redis/mounted-etc
+        name: config
+      - mountPath: /opt/bitnami/redis/etc
+        name: redis-tmp-conf
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    hostname: swift-redis-replicas-0
+    nodeName: gke-swiftserve-cluster-default-pool-c6c42e3e-wqcs
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext:
+      fsGroup: 1001
+      fsGroupChangePolicy: Always
+    serviceAccount: swift-redis-replica
+    serviceAccountName: swift-redis-replica
+    subdomain: swift-redis-headless
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: redis-data
+      persistentVolumeClaim:
+        claimName: redis-data-swift-redis-replicas-0
+    - configMap:
+        defaultMode: 493
+        name: swift-redis-scripts
+      name: start-scripts
+    - configMap:
+        defaultMode: 493
+        name: swift-redis-health
+      name: health
+    - configMap:
+        defaultMode: 420
+        name: swift-redis-configuration
+      name: config
+    - emptyDir: {}
+      name: redis-tmp-conf
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-14T16:09:57Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-14T16:35:25Z"
+      message: 'containers with unready status: [redis]'
+      reason: ContainersNotReady
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-14T16:35:25Z"
+      message: 'containers with unready status: [redis]'
+      reason: ContainersNotReady
+      status: "False"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-14T16:09:57Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://5713449a51a84cca23ebaa4c97b88c2f3e5cd99a4deef89cdc8a4af4e94e663b
+      image: docker.io/bitnami/redis:7.2.4-debian-11-r5
+      imageID: docker.io/bitnami/redis@sha256:cdbfc8ca8e9c0b89ffb13a6786761a5e6fd689c7e27d658dfad57110ba63474d
+      lastState:
+        terminated:
+          containerID: containerd://5713449a51a84cca23ebaa4c97b88c2f3e5cd99a4deef89cdc8a4af4e94e663b
+          exitCode: 0
+          finishedAt: "2024-02-14T16:35:26Z"
+          reason: Completed
+          startedAt: "2024-02-14T16:10:10Z"
+      name: redis
+      ready: false
+      restartCount: 0
+      started: false
+      state:
+        waiting:
+          message: secret "swift-redis" not found
+          reason: CreateContainerConfigError
+    hostIP: 10.128.15.226
+    phase: Running
+    podIP: 10.4.3.4
+    podIPs:
+    - ip: 10.4.3.4
+    qosClass: BestEffort
+    startTime: "2024-02-14T16:09:57Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      checksum/configmap: 86bcc953bb473748a3d3dc60b7c11f34e60c93519234d4c37f42e22ada559d47
+      checksum/health: aff24913d801436ea469d8d374b2ddb3ec4c43ee7ab24663d5f8ff1a1b6991a9
+      checksum/scripts: dee2d034adb72e701b84da218f72bcdeecef78ba9da9adef2b82f802727009cb
+      checksum/secret: 0b0ac6029508d722fd94225e93ae2f559d441ae45d824ecc3db8721b4fa3ea2d
+    creationTimestamp: "2024-02-14T16:10:35Z"
+    generateName: swift-redis-replicas-
+    labels:
+      app.kubernetes.io/component: replica
+      app.kubernetes.io/instance: swift-redis
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: redis
+      app.kubernetes.io/version: 7.2.4
+      controller-revision-hash: swift-redis-replicas-5556667c5b
+      helm.sh/chart: redis-18.13.0
+      statefulset.kubernetes.io/pod-name: swift-redis-replicas-1
+    name: swift-redis-replicas-1
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: StatefulSet
+      name: swift-redis-replicas
+      uid: 77d97206-85f1-4639-ae3a-054195476425
+    resourceVersion: "87416"
+    uid: 6eabdcf5-5904-4f69-a5e8-63195191261e
+  spec:
+    affinity:
+      podAntiAffinity:
+        preferredDuringSchedulingIgnoredDuringExecution:
+        - podAffinityTerm:
+            labelSelector:
+              matchLabels:
+                app.kubernetes.io/component: replica
+                app.kubernetes.io/instance: swift-redis
+                app.kubernetes.io/name: redis
+            topologyKey: kubernetes.io/hostname
+          weight: 1
+    automountServiceAccountToken: false
+    containers:
+    - args:
+      - -c
+      - /opt/bitnami/scripts/start-scripts/start-replica.sh
+      command:
+      - /bin/bash
+      env:
+      - name: BITNAMI_DEBUG
+        value: "false"
+      - name: REDIS_REPLICATION_MODE
+        value: replica
+      - name: REDIS_MASTER_HOST
+        value: swift-redis-master-0.swift-redis-headless.default.svc.cluster.local
+      - name: REDIS_MASTER_PORT_NUMBER
+        value: "6379"
+      - name: ALLOW_EMPTY_PASSWORD
+        value: "no"
+      - name: REDIS_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            key: redis-password
+            name: swift-redis
+      - name: REDIS_MASTER_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            key: redis-password
+            name: swift-redis
+      - name: REDIS_TLS_ENABLED
+        value: "no"
+      - name: REDIS_PORT
+        value: "6379"
+      image: docker.io/bitnami/redis:7.2.4-debian-11-r5
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        exec:
+          command:
+          - sh
+          - -c
+          - /health/ping_liveness_local_and_master.sh 5
+        failureThreshold: 5
+        initialDelaySeconds: 20
+        periodSeconds: 5
+        successThreshold: 1
+        timeoutSeconds: 6
+      name: redis
+      ports:
+      - containerPort: 6379
+        name: redis
+        protocol: TCP
+      readinessProbe:
+        exec:
+          command:
+          - sh
+          - -c
+          - /health/ping_readiness_local_and_master.sh 1
+        failureThreshold: 5
+        initialDelaySeconds: 20
+        periodSeconds: 5
+        successThreshold: 1
+        timeoutSeconds: 2
+      resources: {}
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+          - ALL
+        runAsGroup: 0
+        runAsNonRoot: true
+        runAsUser: 1001
+        seccompProfile:
+          type: RuntimeDefault
+      startupProbe:
+        failureThreshold: 22
+        initialDelaySeconds: 10
+        periodSeconds: 10
+        successThreshold: 1
+        tcpSocket:
+          port: redis
+        timeoutSeconds: 5
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /opt/bitnami/scripts/start-scripts
+        name: start-scripts
+      - mountPath: /health
+        name: health
+      - mountPath: /data
+        name: redis-data
+      - mountPath: /opt/bitnami/redis/mounted-etc
+        name: config
+      - mountPath: /opt/bitnami/redis/etc
+        name: redis-tmp-conf
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    hostname: swift-redis-replicas-1
+    nodeName: gke-swiftserve-cluster-default-pool-c6c42e3e-0jbz
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext:
+      fsGroup: 1001
+      fsGroupChangePolicy: Always
+    serviceAccount: swift-redis-replica
+    serviceAccountName: swift-redis-replica
+    subdomain: swift-redis-headless
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: redis-data
+      persistentVolumeClaim:
+        claimName: redis-data-swift-redis-replicas-1
+    - configMap:
+        defaultMode: 493
+        name: swift-redis-scripts
+      name: start-scripts
+    - configMap:
+        defaultMode: 493
+        name: swift-redis-health
+      name: health
+    - configMap:
+        defaultMode: 420
+        name: swift-redis-configuration
+      name: config
+    - emptyDir: {}
+      name: redis-tmp-conf
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-14T16:10:40Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-14T16:35:23Z"
+      message: 'containers with unready status: [redis]'
+      reason: ContainersNotReady
+      status: "False"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-14T16:35:23Z"
+      message: 'containers with unready status: [redis]'
+      reason: ContainersNotReady
+      status: "False"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-14T16:10:40Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://7bdf5db136f72799224a6ed2d63b34bfba14a9c67ced2c1f7b1bfac82d0a4045
+      image: docker.io/bitnami/redis:7.2.4-debian-11-r5
+      imageID: docker.io/bitnami/redis@sha256:cdbfc8ca8e9c0b89ffb13a6786761a5e6fd689c7e27d658dfad57110ba63474d
+      lastState:
+        terminated:
+          containerID: containerd://7bdf5db136f72799224a6ed2d63b34bfba14a9c67ced2c1f7b1bfac82d0a4045
+          exitCode: 0
+          finishedAt: "2024-02-14T16:35:24Z"
+          reason: Completed
+          startedAt: "2024-02-14T16:10:53Z"
+      name: redis
+      ready: false
+      restartCount: 0
+      started: false
+      state:
+        waiting:
+          message: secret "swift-redis" not found
+          reason: CreateContainerConfigError
+    hostIP: 10.128.15.224
+    phase: Running
+    podIP: 10.4.1.6
+    podIPs:
+    - ip: 10.4.1.6
+    qosClass: BestEffort
+    startTime: "2024-02-14T16:10:40Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      checksum/configmap: 86bcc953bb473748a3d3dc60b7c11f34e60c93519234d4c37f42e22ada559d47
+      checksum/health: aff24913d801436ea469d8d374b2ddb3ec4c43ee7ab24663d5f8ff1a1b6991a9
+      checksum/scripts: 18fa126fe0e9546f7015a6ef8d00ee6ff27ca3f6d4d4fb2da75adbfeaa08a912
+      checksum/secret: 44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a
+    creationTimestamp: "2024-02-14T16:35:06Z"
+    generateName: swift-redis-replicas-
+    labels:
+      app.kubernetes.io/component: replica
+      app.kubernetes.io/instance: swift-redis
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: redis
+      app.kubernetes.io/version: 7.2.4
+      controller-revision-hash: swift-redis-replicas-58fc894997
+      helm.sh/chart: redis-18.13.0
+      statefulset.kubernetes.io/pod-name: swift-redis-replicas-2
+    name: swift-redis-replicas-2
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: StatefulSet
+      name: swift-redis-replicas
+      uid: 77d97206-85f1-4639-ae3a-054195476425
+    resourceVersion: "85027"
+    uid: df08caa3-e5a3-4c31-b0ad-bbe73c5f8bbc
+  spec:
+    affinity:
+      podAntiAffinity:
+        preferredDuringSchedulingIgnoredDuringExecution:
+        - podAffinityTerm:
+            labelSelector:
+              matchLabels:
+                app.kubernetes.io/component: replica
+                app.kubernetes.io/instance: swift-redis
+                app.kubernetes.io/name: redis
+            topologyKey: kubernetes.io/hostname
+          weight: 1
+    automountServiceAccountToken: false
+    containers:
+    - args:
+      - -c
+      - /opt/bitnami/scripts/start-scripts/start-replica.sh
+      command:
+      - /bin/bash
+      env:
+      - name: BITNAMI_DEBUG
+        value: "false"
+      - name: REDIS_REPLICATION_MODE
+        value: replica
+      - name: REDIS_MASTER_HOST
+        value: swift-redis-master-0.swift-redis-headless.default.svc.cluster.local
+      - name: REDIS_MASTER_PORT_NUMBER
+        value: "6379"
+      - name: ALLOW_EMPTY_PASSWORD
+        value: "yes"
+      - name: REDIS_TLS_ENABLED
+        value: "no"
+      - name: REDIS_PORT
+        value: "6379"
+      image: docker.io/bitnami/redis:7.2.4-debian-11-r5
+      imagePullPolicy: IfNotPresent
+      livenessProbe:
+        exec:
+          command:
+          - sh
+          - -c
+          - /health/ping_liveness_local_and_master.sh 5
+        failureThreshold: 5
+        initialDelaySeconds: 20
+        periodSeconds: 5
+        successThreshold: 1
+        timeoutSeconds: 6
+      name: redis
+      ports:
+      - containerPort: 6379
+        name: redis
+        protocol: TCP
+      readinessProbe:
+        exec:
+          command:
+          - sh
+          - -c
+          - /health/ping_readiness_local_and_master.sh 1
+        failureThreshold: 5
+        initialDelaySeconds: 20
+        periodSeconds: 5
+        successThreshold: 1
+        timeoutSeconds: 2
+      resources: {}
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+          - ALL
+        runAsGroup: 0
+        runAsNonRoot: true
+        runAsUser: 1001
+        seccompProfile:
+          type: RuntimeDefault
+      startupProbe:
+        failureThreshold: 22
+        initialDelaySeconds: 10
+        periodSeconds: 10
+        successThreshold: 1
+        tcpSocket:
+          port: redis
+        timeoutSeconds: 5
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /opt/bitnami/scripts/start-scripts
+        name: start-scripts
+      - mountPath: /health
+        name: health
+      - mountPath: /data
+        name: redis-data
+      - mountPath: /opt/bitnami/redis/mounted-etc
+        name: config
+      - mountPath: /opt/bitnami/redis/etc
+        name: redis-tmp-conf
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    hostname: swift-redis-replicas-2
+    nodeName: gke-swiftserve-cluster-default-pool-c6c42e3e-rrzz
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext:
+      fsGroup: 1001
+      fsGroupChangePolicy: Always
+    serviceAccount: swift-redis-replica
+    serviceAccountName: swift-redis-replica
+    subdomain: swift-redis-headless
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: redis-data
+      persistentVolumeClaim:
+        claimName: redis-data-swift-redis-replicas-2
+    - configMap:
+        defaultMode: 493
+        name: swift-redis-scripts
+      name: start-scripts
+    - configMap:
+        defaultMode: 493
+        name: swift-redis-health
+      name: health
+    - configMap:
+        defaultMode: 420
+        name: swift-redis-configuration
+      name: config
+    - emptyDir: {}
+      name: redis-tmp-conf
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-14T16:35:06Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-14T16:35:54Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-14T16:35:54Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-14T16:35:06Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://f31de45f9c9e9750e1eae75217ca52a65b88961b304727b6e8cc62d6a28f8f15
+      image: docker.io/bitnami/redis:7.2.4-debian-11-r5
+      imageID: docker.io/bitnami/redis@sha256:cdbfc8ca8e9c0b89ffb13a6786761a5e6fd689c7e27d658dfad57110ba63474d
+      lastState: {}
+      name: redis
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2024-02-14T16:35:10Z"
+    hostIP: 10.128.15.223
+    phase: Running
+    podIP: 10.4.0.15
+    podIPs:
+    - ip: 10.4.0.15
+    qosClass: BestEffort
+    startTime: "2024-02-14T16:35:06Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/restartedAt: "2024-02-18T09:25:30Z"
+    creationTimestamp: "2024-02-18T09:25:31Z"
+    generateName: swiftserve-building-87d79c8dd-
+    labels:
+      app: swiftserve-building
+      pod-template-hash: 87d79c8dd
+    name: swiftserve-building-87d79c8dd-trtxh
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: swiftserve-building-87d79c8dd
+      uid: 1caad0b7-7fe4-47f5-9b2d-17113ff446d4
+    resourceVersion: "8449123"
+    uid: b07ec707-1394-4c9e-a9cc-bf7b5ac38ee2
+  spec:
+    containers:
+    - image: shabbirdocks/swift-builds-stuff:3
+      imagePullPolicy: IfNotPresent
+      name: swift-builds-stuff
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-88b6m
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-swiftserve-cluster-default-pool-c6c42e3e-0jbz
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-88b6m
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-18T09:25:31Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-26T18:15:43Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-26T18:15:43Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-18T09:25:31Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://40c9a46f23bafa3282629f4f1c973bbb6b4e0c5e7108bf06086a32c5623bce54
+      image: docker.io/shabbirdocks/swift-builds-stuff:3
+      imageID: docker.io/shabbirdocks/swift-builds-stuff@sha256:043c9d0561fa152d48e222b19f972ac2a2aaeb9bf1a949ff7bdde5abe0967c36
+      lastState:
+        terminated:
+          containerID: containerd://cce6cf8d9c79e9968ef3f8930e5a2000d3948a0ae22f57c5c8939bb0ede761bf
+          exitCode: 1
+          finishedAt: "2024-02-26T18:15:27Z"
+          reason: Error
+          startedAt: "2024-02-26T18:15:26Z"
+      name: swift-builds-stuff
+      ready: true
+      restartCount: 28
+      started: true
+      state:
+        running:
+          startedAt: "2024-02-26T18:15:43Z"
+    hostIP: 10.128.15.224
+    phase: Running
+    podIP: 10.4.1.24
+    podIPs:
+    - ip: 10.4.1.24
+    qosClass: BestEffort
+    startTime: "2024-02-18T09:25:31Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2024-02-28T16:43:35Z"
+    generateName: swiftserve-cloning-84ddfb79b8-
+    labels:
+      app: swiftserve-cloning
+      pod-template-hash: 84ddfb79b8
+    name: swiftserve-cloning-84ddfb79b8-l68rx
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: swiftserve-cloning-84ddfb79b8
+      uid: 4d14d50f-09fc-4f48-abac-cb4081c2d1d5
+    resourceVersion: "9794181"
+    uid: 9eb94726-3dec-4401-b259-f3aa9b6ac322
+  spec:
+    containers:
+    - image: shabbirdocks/swiftserve-clones-stuff:2
+      imagePullPolicy: IfNotPresent
+      name: swiftserve-clones-stuff
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-x8b8r
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-swiftserve-cluster-default-pool-c6c42e3e-0jbz
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-x8b8r
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-28T16:43:35Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-28T16:43:37Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-28T16:43:37Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-28T16:43:35Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://9804474ddf919f8df328d7f4287c606b0e1a5504207abd3608e21c0c7206336d
+      image: docker.io/shabbirdocks/swiftserve-clones-stuff:2
+      imageID: docker.io/shabbirdocks/swiftserve-clones-stuff@sha256:7f25712ad2d6af4bdaeb3f4120e3e2bff8674e08bbe95c84f9487b193384e6ac
+      lastState: {}
+      name: swiftserve-clones-stuff
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2024-02-28T16:43:36Z"
+    hostIP: 10.128.15.224
+    phase: Running
+    podIP: 10.4.1.25
+    podIPs:
+    - ip: 10.4.1.25
+    qosClass: BestEffort
+    startTime: "2024-02-28T16:43:35Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2024-02-15T03:43:21Z"
+    generateName: swiftserve-serving-7b8db4d64-
+    labels:
+      app: swiftserve-serving
+      pod-template-hash: 7b8db4d64
+    name: swiftserve-serving-7b8db4d64-lbhs2
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: swiftserve-serving-7b8db4d64
+      uid: 86c0b001-52e4-41ad-8d13-32600ebe2579
+    resourceVersion: "407820"
+    uid: 1a11acdf-142c-4e0a-84ad-61ef21fb1772
+  spec:
+    containers:
+    - image: shabbirdocks/swift-serves-stuff:2
+      imagePullPolicy: IfNotPresent
+      name: swift-serves-stuff
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-7lzc9
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-swiftserve-cluster-default-pool-c6c42e3e-rrzz
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-7lzc9
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-15T03:43:21Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-15T03:55:52Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-15T03:55:52Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2024-02-15T03:43:21Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://74bf5e31797694988f2723916104c4d4c3e30bda42dc8f4d31d4eeae7eabf349
+      image: docker.io/shabbirdocks/swift-serves-stuff:2
+      imageID: docker.io/shabbirdocks/swift-serves-stuff@sha256:80b2513c7283f574701b790a5b1b57619e0abfe34a71f1beeeffb4d4efe5b2a4
+      lastState:
+        terminated:
+          containerID: containerd://a84847e00342e82794a8a1696f6c65f8a21266c30b44cd52b73a6e45f0c2cc58
+          exitCode: 1
+          finishedAt: "2024-02-15T03:55:51Z"
+          reason: Error
+          startedAt: "2024-02-15T03:43:31Z"
+      name: swift-serves-stuff
+      ready: true
+      restartCount: 1
+      started: true
+      state:
+        running:
+          startedAt: "2024-02-15T03:55:51Z"
+    hostIP: 10.128.15.223
+    phase: Running
+    podIP: 10.4.0.16
+    podIPs:
+    - ip: 10.4.0.16
+    qosClass: BestEffort
+    startTime: "2024-02-15T03:43:21Z"
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2024-02-14T13:38:50Z"
+    labels:
+      component: apiserver
+      provider: kubernetes
+    name: kubernetes
+    namespace: default
+    resourceVersion: "193"
+    uid: a4777aca-9f2c-47d5-992a-749a4cc8ed6d
+  spec:
+    clusterIP: 10.8.0.1
+    clusterIPs:
+    - 10.8.0.1
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: 443
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      cloud.google.com/neg: '{"ingress":true}'
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{},"name":"redis-commander","namespace":"default"},"spec":{"ports":[{"name":"redis-commander","port":8081,"protocol":"TCP","targetPort":8081}],"selector":{"app":"redis-commander"},"type":"LoadBalancer"}}
+    creationTimestamp: "2024-02-14T16:31:42Z"
+    finalizers:
+    - service.kubernetes.io/load-balancer-cleanup
+    name: redis-commander
+    namespace: default
+    resourceVersion: "83160"
+    uid: fe1880ac-4a46-4dbc-9d38-cb395e0fdac0
+  spec:
+    allocateLoadBalancerNodePorts: true
+    clusterIP: 10.8.14.188
+    clusterIPs:
+    - 10.8.14.188
+    externalTrafficPolicy: Cluster
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: redis-commander
+      nodePort: 30563
+      port: 8081
+      protocol: TCP
+      targetPort: 8081
+    selector:
+      app: redis-commander
+    sessionAffinity: None
+    type: LoadBalancer
+  status:
+    loadBalancer:
+      ingress:
+      - ip: 35.192.85.241
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      cloud.google.com/neg: '{"ingress":true}'
+      meta.helm.sh/release-name: swift-redis
+      meta.helm.sh/release-namespace: default
+    creationTimestamp: "2024-02-14T16:09:43Z"
+    labels:
+      app.kubernetes.io/instance: swift-redis
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: redis
+      app.kubernetes.io/version: 7.2.4
+      helm.sh/chart: redis-18.13.0
+    name: swift-redis-headless
+    namespace: default
+    resourceVersion: "72333"
+    uid: 632a88fd-ab96-43d1-9c16-7f3a5914bf67
+  spec:
+    clusterIP: None
+    clusterIPs:
+    - None
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: tcp-redis
+      port: 6379
+      protocol: TCP
+      targetPort: redis
+    selector:
+      app.kubernetes.io/instance: swift-redis
+      app.kubernetes.io/name: redis
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      cloud.google.com/neg: '{"ingress":true}'
+      meta.helm.sh/release-name: swift-redis
+      meta.helm.sh/release-namespace: default
+    creationTimestamp: "2024-02-14T16:09:43Z"
+    finalizers:
+    - service.kubernetes.io/load-balancer-cleanup
+    labels:
+      app.kubernetes.io/component: master
+      app.kubernetes.io/instance: swift-redis
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: redis
+      app.kubernetes.io/version: 7.2.4
+      helm.sh/chart: redis-18.13.0
+    name: swift-redis-master
+    namespace: default
+    resourceVersion: "89273"
+    uid: 6586ef7c-dbbf-480d-93ef-ff93ba30eaec
+  spec:
+    allocateLoadBalancerNodePorts: true
+    clusterIP: 10.8.7.59
+    clusterIPs:
+    - 10.8.7.59
+    externalTrafficPolicy: Cluster
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: tcp-redis
+      nodePort: 31803
+      port: 6379
+      protocol: TCP
+      targetPort: 6379
+    selector:
+      app.kubernetes.io/component: master
+      app.kubernetes.io/instance: swift-redis
+      app.kubernetes.io/name: redis
+    sessionAffinity: None
+    type: LoadBalancer
+  status:
+    loadBalancer:
+      ingress:
+      - ip: 34.27.85.70
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      cloud.google.com/neg: '{"ingress":true}'
+      meta.helm.sh/release-name: swift-redis
+      meta.helm.sh/release-namespace: default
+    creationTimestamp: "2024-02-14T16:09:43Z"
+    labels:
+      app.kubernetes.io/component: replica
+      app.kubernetes.io/instance: swift-redis
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: redis
+      app.kubernetes.io/version: 7.2.4
+      helm.sh/chart: redis-18.13.0
+    name: swift-redis-replicas
+    namespace: default
+    resourceVersion: "72336"
+    uid: 08ba727a-1186-4aad-b5fb-11dde1c60902
+  spec:
+    clusterIP: 10.8.7.51
+    clusterIPs:
+    - 10.8.7.51
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: tcp-redis
+      port: 6379
+      protocol: TCP
+      targetPort: redis
+    selector:
+      app.kubernetes.io/component: replica
+      app.kubernetes.io/instance: swift-redis
+      app.kubernetes.io/name: redis
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      cloud.google.com/neg: '{"ingress":true}'
+    creationTimestamp: "2024-02-16T13:03:37Z"
+    finalizers:
+    - service.kubernetes.io/load-balancer-cleanup
+    labels:
+      app: swiftserve-building
+    name: swiftserve-building
+    namespace: default
+    resourceVersion: "1357679"
+    uid: 35e8003b-bb06-4109-bd67-36471e841815
+  spec:
+    allocateLoadBalancerNodePorts: true
+    clusterIP: 10.8.3.62
+    clusterIPs:
+    - 10.8.3.62
+    externalTrafficPolicy: Cluster
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - nodePort: 31426
+      port: 8000
+      protocol: TCP
+      targetPort: 8000
+    selector:
+      app: swiftserve-building
+    sessionAffinity: None
+    type: LoadBalancer
+  status:
+    loadBalancer:
+      ingress:
+      - ip: 34.133.29.108
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      cloud.google.com/neg: '{"ingress":true}'
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"v1","kind":"Service","metadata":{"annotations":{"cloud.google.com/neg":"{\"ingress\":true}"},"creationTimestamp":"2024-02-15T02:43:51Z","finalizers":["service.kubernetes.io/load-balancer-cleanup"],"labels":{"app":"swiftserve-cloning"},"name":"swiftserve-cloning","namespace":"default","resourceVersion":"373641","uid":"a923621d-4d41-4acb-a9b7-075da2cf3f91"},"spec":{"allocateLoadBalancerNodePorts":true,"clusterIP":"10.8.13.123","clusterIPs":["10.8.13.123"],"externalTrafficPolicy":"Cluster","internalTrafficPolicy":"Cluster","ipFamilies":["IPv4"],"ipFamilyPolicy":"SingleStack","ports":[{"nodePort":30833,"port":3000,"protocol":"TCP","targetPort":3000}],"selector":{"app":"swiftserve-cloning"},"sessionAffinity":"None","type":"LoadBalancer"},"status":{"loadBalancer":{"ingress":[{"ip":"35.192.5.136"}]}}}
+    creationTimestamp: "2024-02-28T16:45:46Z"
+    finalizers:
+    - service.kubernetes.io/load-balancer-cleanup
+    labels:
+      app: swiftserve-cloning
+    name: swiftserve-cloning
+    namespace: default
+    resourceVersion: "9795480"
+    uid: 103916c5-08a7-4a7c-a372-1c2767cf438d
+  spec:
+    allocateLoadBalancerNodePorts: true
+    clusterIP: 10.8.13.123
+    clusterIPs:
+    - 10.8.13.123
+    externalTrafficPolicy: Cluster
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - nodePort: 30833
+      port: 3000
+      protocol: TCP
+      targetPort: 3000
+    selector:
+      app: swiftserve-cloning
+    sessionAffinity: None
+    type: LoadBalancer
+  status:
+    loadBalancer:
+      ingress:
+      - ip: 34.173.50.73
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      cloud.google.com/neg: '{"ingress":true}'
+    creationTimestamp: "2024-02-15T13:40:06Z"
+    labels:
+      app: swiftserve-serving
+    name: swiftserve-serving
+    namespace: default
+    resourceVersion: "1364307"
+    uid: 0cf0f5d7-9c80-41ff-8495-37fb87596179
+  spec:
+    clusterIP: 10.8.2.10
+    clusterIPs:
+    - 10.8.2.10
+    externalTrafficPolicy: Cluster
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - nodePort: 31425
+      port: 8000
+      protocol: TCP
+      targetPort: 8000
+    selector:
+      app: swiftserve-serving
+    sessionAffinity: None
+    type: NodePort
+  status:
+    loadBalancer: {}
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{},"name":"my-deployment-50000","namespace":"default"},"spec":{"replicas":3,"selector":{"matchLabels":{"app":"metrics","department":"engineering"}},"template":{"metadata":{"labels":{"app":"metrics","department":"engineering"}},"spec":{"containers":[{"env":[{"name":"PORT","value":"50000"}],"image":"us-docker.pkg.dev/google-samples/containers/gke/hello-app:2.0","name":"hello"}]}}}}
+    creationTimestamp: "2024-02-15T14:03:37Z"
+    generation: 1
+    name: my-deployment-50000
+    namespace: default
+    resourceVersion: "694326"
+    uid: d5034a0b-3f5d-4738-b162-4a66cad85435
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 3
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: metrics
+        department: engineering
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: metrics
+          department: engineering
+      spec:
+        containers:
+        - env:
+          - name: PORT
+            value: "50000"
+          image: us-docker.pkg.dev/google-samples/containers/gke/hello-app:2.0
+          imagePullPolicy: IfNotPresent
+          name: hello
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 3
+    conditions:
+    - lastTransitionTime: "2024-02-15T14:03:39Z"
+      lastUpdateTime: "2024-02-15T14:03:39Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2024-02-15T14:03:37Z"
+      lastUpdateTime: "2024-02-15T14:03:39Z"
+      message: ReplicaSet "my-deployment-50000-5456c9767" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 1
+    readyReplicas: 3
+    replicas: 3
+    updatedReplicas: 3
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      container.apparmor.security.beta.kubernetes.io/redis-commander: runtime/default
+      container.security.alpha.kubernetes.io/redis-commander: runtime/default
+      deployment.kubernetes.io/revision: "1"
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{"container.apparmor.security.beta.kubernetes.io/redis-commander":"runtime/default","container.security.alpha.kubernetes.io/redis-commander":"runtime/default"},"name":"redis-commander","namespace":"default"},"spec":{"replicas":1,"selector":{"matchLabels":{"app":"redis-commander"}},"template":{"metadata":{"labels":{"app":"redis-commander","tier":"backend"}},"spec":{"automountServiceAccountToken":false,"containers":[{"env":[{"name":"REDIS_HOST","value":"redis-1669709819-master"},{"name":"K8S_SIGTERM","value":"1"}],"image":"rediscommander/redis-commander","imagePullPolicy":"Always","livenessProbe":{"httpGet":{"path":"/favicon.png","port":8081},"initialDelaySeconds":10,"timeoutSeconds":5},"name":"redis-commander","ports":[{"containerPort":8081,"name":"redis-commander"}],"resources":{"limits":{"cpu":"500m","memory":"512M"}},"securityContext":{"allowPrivilegeEscalation":false,"capabilities":{"drop":["ALL"]},"readOnlyRootFilesystem":false,"runAsNonRoot":true}}]}}}}
+    creationTimestamp: "2024-02-14T16:31:41Z"
+    generation: 1
+    name: redis-commander
+    namespace: default
+    resourceVersion: "82968"
+    uid: c6f15d56-66d2-47f9-aefe-09638c7ea5a4
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 1
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: redis-commander
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: redis-commander
+          tier: backend
+      spec:
+        automountServiceAccountToken: false
+        containers:
+        - env:
+          - name: REDIS_HOST
+            value: redis-1669709819-master
+          - name: K8S_SIGTERM
+            value: "1"
+          image: rediscommander/redis-commander
+          imagePullPolicy: Always
+          livenessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /favicon.png
+              port: 8081
+              scheme: HTTP
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 5
+          name: redis-commander
+          ports:
+          - containerPort: 8081
+            name: redis-commander
+            protocol: TCP
+          resources:
+            limits:
+              cpu: 500m
+              memory: 512M
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            readOnlyRootFilesystem: false
+            runAsNonRoot: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: "2024-02-14T16:31:47Z"
+      lastUpdateTime: "2024-02-14T16:31:47Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2024-02-14T16:31:41Z"
+      lastUpdateTime: "2024-02-14T16:31:47Z"
+      message: ReplicaSet "redis-commander-b8df779c5" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "5"
+    creationTimestamp: "2024-02-16T13:02:26Z"
+    generation: 5
+    labels:
+      app: swiftserve-building
+    name: swiftserve-building
+    namespace: default
+    resourceVersion: "8449127"
+    uid: e7d9003f-687c-4263-b8c8-768fe3e90cb9
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 1
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: swiftserve-building
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        annotations:
+          kubectl.kubernetes.io/restartedAt: "2024-02-18T09:25:30Z"
+        creationTimestamp: null
+        labels:
+          app: swiftserve-building
+      spec:
+        containers:
+        - image: shabbirdocks/swift-builds-stuff:3
+          imagePullPolicy: IfNotPresent
+          name: swift-builds-stuff
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: "2024-02-16T13:02:26Z"
+      lastUpdateTime: "2024-02-18T09:25:32Z"
+      message: ReplicaSet "swiftserve-building-87d79c8dd" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    - lastTransitionTime: "2024-02-26T18:15:43Z"
+      lastUpdateTime: "2024-02-26T18:15:43Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    observedGeneration: 5
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"apps/v1","kind":"Deployment","metadata":{"annotations":{"deployment.kubernetes.io/revision":"1"},"creationTimestamp":"2024-02-15T03:12:23Z","generation":1,"labels":{"app":"swiftserve-cloning"},"name":"swiftserve-cloning","namespace":"default","resourceVersion":"2623581","uid":"4e21caec-5da1-437d-8231-4b6cd14c09f7"},"spec":{"progressDeadlineSeconds":600,"replicas":1,"revisionHistoryLimit":10,"selector":{"matchLabels":{"app":"swiftserve-cloning"}},"strategy":{"rollingUpdate":{"maxSurge":"25%","maxUnavailable":"25%"},"type":"RollingUpdate"},"template":{"metadata":{"creationTimestamp":null,"labels":{"app":"swiftserve-cloning"}},"spec":{"containers":[{"image":"shabbirdocks/swiftserve-clones-stuff:2","imagePullPolicy":"IfNotPresent","name":"swiftserve-clones-stuff","resources":{},"terminationMessagePath":"/dev/termination-log","terminationMessagePolicy":"File"}],"dnsPolicy":"ClusterFirst","restartPolicy":"Always","schedulerName":"default-scheduler","securityContext":{},"terminationGracePeriodSeconds":30}}},"status":{"availableReplicas":1,"conditions":[{"lastTransitionTime":"2024-02-15T03:12:23Z","lastUpdateTime":"2024-02-15T03:12:33Z","message":"ReplicaSet \"swiftserve-cloning-84ddfb79b8\" has successfully progressed.","reason":"NewReplicaSetAvailable","status":"True","type":"Progressing"},{"lastTransitionTime":"2024-02-18T09:03:04Z","lastUpdateTime":"2024-02-18T09:03:04Z","message":"Deployment has minimum availability.","reason":"MinimumReplicasAvailable","status":"True","type":"Available"}],"observedGeneration":1,"readyReplicas":1,"replicas":1,"updatedReplicas":1}}
+    creationTimestamp: "2024-02-28T16:43:35Z"
+    generation: 1
+    labels:
+      app: swiftserve-cloning
+    name: swiftserve-cloning
+    namespace: default
+    resourceVersion: "9794183"
+    uid: 85e6f189-f28e-415c-b6a2-8d27a9cdbd73
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 1
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: swiftserve-cloning
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: swiftserve-cloning
+      spec:
+        containers:
+        - image: shabbirdocks/swiftserve-clones-stuff:2
+          imagePullPolicy: IfNotPresent
+          name: swiftserve-clones-stuff
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: "2024-02-28T16:43:37Z"
+      lastUpdateTime: "2024-02-28T16:43:37Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2024-02-28T16:43:35Z"
+      lastUpdateTime: "2024-02-28T16:43:37Z"
+      message: ReplicaSet "swiftserve-cloning-84ddfb79b8" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2024-02-15T03:43:20Z"
+    generation: 1
+    labels:
+      app: swiftserve-serving
+    name: swiftserve-serving
+    namespace: default
+    resourceVersion: "407824"
+    uid: 1e16fc06-36b5-4d59-9b24-4b1b517852c8
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 1
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: swiftserve-serving
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: swiftserve-serving
+      spec:
+        containers:
+        - image: shabbirdocks/swift-serves-stuff:2
+          imagePullPolicy: IfNotPresent
+          name: swift-serves-stuff
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: "2024-02-15T03:43:21Z"
+      lastUpdateTime: "2024-02-15T03:43:31Z"
+      message: ReplicaSet "swiftserve-serving-7b8db4d64" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    - lastTransitionTime: "2024-02-15T03:55:52Z"
+      lastUpdateTime: "2024-02-15T03:55:52Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "3"
+      deployment.kubernetes.io/max-replicas: "4"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2024-02-15T14:03:37Z"
+    generation: 1
+    labels:
+      app: metrics
+      department: engineering
+      pod-template-hash: 5456c9767
+    name: my-deployment-50000-5456c9767
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: my-deployment-50000
+      uid: d5034a0b-3f5d-4738-b162-4a66cad85435
+    resourceVersion: "694324"
+    uid: 3f8c6e65-1c62-4921-8f02-145a3b72a16f
+  spec:
+    replicas: 3
+    selector:
+      matchLabels:
+        app: metrics
+        department: engineering
+        pod-template-hash: 5456c9767
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: metrics
+          department: engineering
+          pod-template-hash: 5456c9767
+      spec:
+        containers:
+        - env:
+          - name: PORT
+            value: "50000"
+          image: us-docker.pkg.dev/google-samples/containers/gke/hello-app:2.0
+          imagePullPolicy: IfNotPresent
+          name: hello
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 3
+    fullyLabeledReplicas: 3
+    observedGeneration: 1
+    readyReplicas: 3
+    replicas: 3
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      container.apparmor.security.beta.kubernetes.io/redis-commander: runtime/default
+      container.security.alpha.kubernetes.io/redis-commander: runtime/default
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2024-02-14T16:31:41Z"
+    generation: 1
+    labels:
+      app: redis-commander
+      pod-template-hash: b8df779c5
+      tier: backend
+    name: redis-commander-b8df779c5
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: redis-commander
+      uid: c6f15d56-66d2-47f9-aefe-09638c7ea5a4
+    resourceVersion: "82967"
+    uid: 611af12e-fb70-4be1-884b-eecb71b5d740
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: redis-commander
+        pod-template-hash: b8df779c5
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: redis-commander
+          pod-template-hash: b8df779c5
+          tier: backend
+      spec:
+        automountServiceAccountToken: false
+        containers:
+        - env:
+          - name: REDIS_HOST
+            value: redis-1669709819-master
+          - name: K8S_SIGTERM
+            value: "1"
+          image: rediscommander/redis-commander
+          imagePullPolicy: Always
+          livenessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /favicon.png
+              port: 8081
+              scheme: HTTP
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 5
+          name: redis-commander
+          ports:
+          - containerPort: 8081
+            name: redis-commander
+            protocol: TCP
+          resources:
+            limits:
+              cpu: 500m
+              memory: 512M
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            readOnlyRootFilesystem: false
+            runAsNonRoot: true
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "2"
+    creationTimestamp: "2024-02-18T09:19:34Z"
+    generation: 2
+    labels:
+      app: swiftserve-building
+      pod-template-hash: 5f445f5c97
+    name: swiftserve-building-5f445f5c97
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: swiftserve-building
+      uid: e7d9003f-687c-4263-b8c8-768fe3e90cb9
+    resourceVersion: "2632665"
+    uid: 12194897-144f-4173-b785-407908780148
+  spec:
+    replicas: 0
+    selector:
+      matchLabels:
+        app: swiftserve-building
+        pod-template-hash: 5f445f5c97
+    template:
+      metadata:
+        annotations:
+          kubectl.kubernetes.io/restartedAt: "2024-02-18T09:19:34Z"
+        creationTimestamp: null
+        labels:
+          app: swiftserve-building
+          pod-template-hash: 5f445f5c97
+      spec:
+        containers:
+        - image: shabbirdocks/swift-builds-stuff:3
+          imagePullPolicy: IfNotPresent
+          name: swift-builds-stuff
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    observedGeneration: 2
+    replicas: 0
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2024-02-16T13:02:26Z"
+    generation: 2
+    labels:
+      app: swiftserve-building
+      pod-template-hash: 669bb5b76c
+    name: swiftserve-building-669bb5b76c
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: swiftserve-building
+      uid: e7d9003f-687c-4263-b8c8-768fe3e90cb9
+    resourceVersion: "2631660"
+    uid: e5c7f439-c0ab-4e64-804c-cdb7d164221d
+  spec:
+    replicas: 0
+    selector:
+      matchLabels:
+        app: swiftserve-building
+        pod-template-hash: 669bb5b76c
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: swiftserve-building
+          pod-template-hash: 669bb5b76c
+      spec:
+        containers:
+        - image: shabbirdocks/swift-builds-stuff:3
+          imagePullPolicy: IfNotPresent
+          name: swift-builds-stuff
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    observedGeneration: 2
+    replicas: 0
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "4"
+    creationTimestamp: "2024-02-18T09:24:53Z"
+    generation: 2
+    labels:
+      app: swiftserve-building
+      pod-template-hash: 85cb5966b9
+    name: swiftserve-building-85cb5966b9
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: swiftserve-building
+      uid: e7d9003f-687c-4263-b8c8-768fe3e90cb9
+    resourceVersion: "2634603"
+    uid: 2a8ae540-ae38-4647-89ce-5f2c95416971
+  spec:
+    replicas: 0
+    selector:
+      matchLabels:
+        app: swiftserve-building
+        pod-template-hash: 85cb5966b9
+    template:
+      metadata:
+        annotations:
+          kubectl.kubernetes.io/restartedAt: "2024-02-18T09:24:52Z"
+        creationTimestamp: null
+        labels:
+          app: swiftserve-building
+          pod-template-hash: 85cb5966b9
+      spec:
+        containers:
+        - image: shabbirdocks/swift-builds-stuff:3
+          imagePullPolicy: IfNotPresent
+          name: swift-builds-stuff
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    observedGeneration: 2
+    replicas: 0
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "5"
+    creationTimestamp: "2024-02-18T09:25:31Z"
+    generation: 1
+    labels:
+      app: swiftserve-building
+      pod-template-hash: 87d79c8dd
+    name: swiftserve-building-87d79c8dd
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: swiftserve-building
+      uid: e7d9003f-687c-4263-b8c8-768fe3e90cb9
+    resourceVersion: "8449126"
+    uid: 1caad0b7-7fe4-47f5-9b2d-17113ff446d4
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: swiftserve-building
+        pod-template-hash: 87d79c8dd
+    template:
+      metadata:
+        annotations:
+          kubectl.kubernetes.io/restartedAt: "2024-02-18T09:25:30Z"
+        creationTimestamp: null
+        labels:
+          app: swiftserve-building
+          pod-template-hash: 87d79c8dd
+      spec:
+        containers:
+        - image: shabbirdocks/swift-builds-stuff:3
+          imagePullPolicy: IfNotPresent
+          name: swift-builds-stuff
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "3"
+    creationTimestamp: "2024-02-18T09:21:42Z"
+    generation: 2
+    labels:
+      app: swiftserve-building
+      pod-template-hash: 9cd8ffb69
+    name: swiftserve-building-9cd8ffb69
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: swiftserve-building
+      uid: e7d9003f-687c-4263-b8c8-768fe3e90cb9
+    resourceVersion: "2634261"
+    uid: a730000e-d6ac-4a0e-8863-94abe4865483
+  spec:
+    replicas: 0
+    selector:
+      matchLabels:
+        app: swiftserve-building
+        pod-template-hash: 9cd8ffb69
+    template:
+      metadata:
+        annotations:
+          kubectl.kubernetes.io/restartedAt: "2024-02-18T09:21:42Z"
+        creationTimestamp: null
+        labels:
+          app: swiftserve-building
+          pod-template-hash: 9cd8ffb69
+      spec:
+        containers:
+        - image: shabbirdocks/swift-builds-stuff:3
+          imagePullPolicy: IfNotPresent
+          name: swift-builds-stuff
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    observedGeneration: 2
+    replicas: 0
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2024-02-28T16:43:35Z"
+    generation: 1
+    labels:
+      app: swiftserve-cloning
+      pod-template-hash: 84ddfb79b8
+    name: swiftserve-cloning-84ddfb79b8
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: swiftserve-cloning
+      uid: 85e6f189-f28e-415c-b6a2-8d27a9cdbd73
+    resourceVersion: "9794182"
+    uid: 4d14d50f-09fc-4f48-abac-cb4081c2d1d5
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: swiftserve-cloning
+        pod-template-hash: 84ddfb79b8
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: swiftserve-cloning
+          pod-template-hash: 84ddfb79b8
+      spec:
+        containers:
+        - image: shabbirdocks/swiftserve-clones-stuff:2
+          imagePullPolicy: IfNotPresent
+          name: swiftserve-clones-stuff
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2024-02-15T03:43:20Z"
+    generation: 1
+    labels:
+      app: swiftserve-serving
+      pod-template-hash: 7b8db4d64
+    name: swiftserve-serving-7b8db4d64
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: swiftserve-serving
+      uid: 1e16fc06-36b5-4d59-9b24-4b1b517852c8
+    resourceVersion: "407822"
+    uid: 86c0b001-52e4-41ad-8d13-32600ebe2579
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: swiftserve-serving
+        pod-template-hash: 7b8db4d64
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: swiftserve-serving
+          pod-template-hash: 7b8db4d64
+      spec:
+        containers:
+        - image: shabbirdocks/swift-serves-stuff:2
+          imagePullPolicy: IfNotPresent
+          name: swift-serves-stuff
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+- apiVersion: apps/v1
+  kind: StatefulSet
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: swift-redis
+      meta.helm.sh/release-namespace: default
+    creationTimestamp: "2024-02-14T16:09:44Z"
+    generation: 2
+    labels:
+      app.kubernetes.io/component: master
+      app.kubernetes.io/instance: swift-redis
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: redis
+      app.kubernetes.io/version: 7.2.4
+      helm.sh/chart: redis-18.13.0
+    name: swift-redis-master
+    namespace: default
+    resourceVersion: "84981"
+    uid: 9add9b4b-1c1e-45e7-ab66-824600c073a7
+  spec:
+    persistentVolumeClaimRetentionPolicy:
+      whenDeleted: Retain
+      whenScaled: Retain
+    podManagementPolicy: OrderedReady
+    replicas: 1
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app.kubernetes.io/component: master
+        app.kubernetes.io/instance: swift-redis
+        app.kubernetes.io/name: redis
+    serviceName: swift-redis-headless
+    template:
+      metadata:
+        annotations:
+          checksum/configmap: 86bcc953bb473748a3d3dc60b7c11f34e60c93519234d4c37f42e22ada559d47
+          checksum/health: aff24913d801436ea469d8d374b2ddb3ec4c43ee7ab24663d5f8ff1a1b6991a9
+          checksum/scripts: 18fa126fe0e9546f7015a6ef8d00ee6ff27ca3f6d4d4fb2da75adbfeaa08a912
+          checksum/secret: 44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a
+        creationTimestamp: null
+        labels:
+          app.kubernetes.io/component: master
+          app.kubernetes.io/instance: swift-redis
+          app.kubernetes.io/managed-by: Helm
+          app.kubernetes.io/name: redis
+          app.kubernetes.io/version: 7.2.4
+          helm.sh/chart: redis-18.13.0
+      spec:
+        affinity:
+          podAntiAffinity:
+            preferredDuringSchedulingIgnoredDuringExecution:
+            - podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app.kubernetes.io/component: master
+                    app.kubernetes.io/instance: swift-redis
+                    app.kubernetes.io/name: redis
+                topologyKey: kubernetes.io/hostname
+              weight: 1
+        automountServiceAccountToken: false
+        containers:
+        - args:
+          - -c
+          - /opt/bitnami/scripts/start-scripts/start-master.sh
+          command:
+          - /bin/bash
+          env:
+          - name: BITNAMI_DEBUG
+            value: "false"
+          - name: REDIS_REPLICATION_MODE
+            value: master
+          - name: ALLOW_EMPTY_PASSWORD
+            value: "yes"
+          - name: REDIS_TLS_ENABLED
+            value: "no"
+          - name: REDIS_PORT
+            value: "6379"
+          image: docker.io/bitnami/redis:7.2.4-debian-11-r5
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            exec:
+              command:
+              - sh
+              - -c
+              - /health/ping_liveness_local.sh 5
+            failureThreshold: 5
+            initialDelaySeconds: 20
+            periodSeconds: 5
+            successThreshold: 1
+            timeoutSeconds: 6
+          name: redis
+          ports:
+          - containerPort: 6379
+            name: redis
+            protocol: TCP
+          readinessProbe:
+            exec:
+              command:
+              - sh
+              - -c
+              - /health/ping_readiness_local.sh 1
+            failureThreshold: 5
+            initialDelaySeconds: 20
+            periodSeconds: 5
+            successThreshold: 1
+            timeoutSeconds: 2
+          resources: {}
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            runAsGroup: 0
+            runAsNonRoot: true
+            runAsUser: 1001
+            seccompProfile:
+              type: RuntimeDefault
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /opt/bitnami/scripts/start-scripts
+            name: start-scripts
+          - mountPath: /health
+            name: health
+          - mountPath: /data
+            name: redis-data
+          - mountPath: /opt/bitnami/redis/mounted-etc
+            name: config
+          - mountPath: /opt/bitnami/redis/etc/
+            name: redis-tmp-conf
+          - mountPath: /tmp
+            name: tmp
+        dnsPolicy: ClusterFirst
+        enableServiceLinks: true
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext:
+          fsGroup: 1001
+          fsGroupChangePolicy: Always
+        serviceAccount: swift-redis-master
+        serviceAccountName: swift-redis-master
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - configMap:
+            defaultMode: 493
+            name: swift-redis-scripts
+          name: start-scripts
+        - configMap:
+            defaultMode: 493
+            name: swift-redis-health
+          name: health
+        - configMap:
+            defaultMode: 420
+            name: swift-redis-configuration
+          name: config
+        - emptyDir: {}
+          name: redis-tmp-conf
+        - emptyDir: {}
+          name: tmp
+    updateStrategy:
+      type: RollingUpdate
+    volumeClaimTemplates:
+    - apiVersion: v1
+      kind: PersistentVolumeClaim
+      metadata:
+        creationTimestamp: null
+        labels:
+          app.kubernetes.io/component: master
+          app.kubernetes.io/instance: swift-redis
+          app.kubernetes.io/name: redis
+        name: redis-data
+      spec:
+        accessModes:
+        - ReadWriteOnce
+        resources:
+          requests:
+            storage: 8Gi
+        volumeMode: Filesystem
+      status:
+        phase: Pending
+  status:
+    availableReplicas: 1
+    collisionCount: 0
+    currentReplicas: 1
+    currentRevision: swift-redis-master-7d99f479b
+    observedGeneration: 2
+    readyReplicas: 1
+    replicas: 1
+    updateRevision: swift-redis-master-7d99f479b
+    updatedReplicas: 1
+- apiVersion: apps/v1
+  kind: StatefulSet
+  metadata:
+    annotations:
+      meta.helm.sh/release-name: swift-redis
+      meta.helm.sh/release-namespace: default
+    creationTimestamp: "2024-02-14T16:09:44Z"
+    generation: 2
+    labels:
+      app.kubernetes.io/component: replica
+      app.kubernetes.io/instance: swift-redis
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: redis
+      app.kubernetes.io/version: 7.2.4
+      helm.sh/chart: redis-18.13.0
+    name: swift-redis-replicas
+    namespace: default
+    resourceVersion: "85032"
+    uid: 77d97206-85f1-4639-ae3a-054195476425
+  spec:
+    persistentVolumeClaimRetentionPolicy:
+      whenDeleted: Retain
+      whenScaled: Retain
+    podManagementPolicy: OrderedReady
+    replicas: 3
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app.kubernetes.io/component: replica
+        app.kubernetes.io/instance: swift-redis
+        app.kubernetes.io/name: redis
+    serviceName: swift-redis-headless
+    template:
+      metadata:
+        annotations:
+          checksum/configmap: 86bcc953bb473748a3d3dc60b7c11f34e60c93519234d4c37f42e22ada559d47
+          checksum/health: aff24913d801436ea469d8d374b2ddb3ec4c43ee7ab24663d5f8ff1a1b6991a9
+          checksum/scripts: 18fa126fe0e9546f7015a6ef8d00ee6ff27ca3f6d4d4fb2da75adbfeaa08a912
+          checksum/secret: 44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a
+        creationTimestamp: null
+        labels:
+          app.kubernetes.io/component: replica
+          app.kubernetes.io/instance: swift-redis
+          app.kubernetes.io/managed-by: Helm
+          app.kubernetes.io/name: redis
+          app.kubernetes.io/version: 7.2.4
+          helm.sh/chart: redis-18.13.0
+      spec:
+        affinity:
+          podAntiAffinity:
+            preferredDuringSchedulingIgnoredDuringExecution:
+            - podAffinityTerm:
+                labelSelector:
+                  matchLabels:
+                    app.kubernetes.io/component: replica
+                    app.kubernetes.io/instance: swift-redis
+                    app.kubernetes.io/name: redis
+                topologyKey: kubernetes.io/hostname
+              weight: 1
+        automountServiceAccountToken: false
+        containers:
+        - args:
+          - -c
+          - /opt/bitnami/scripts/start-scripts/start-replica.sh
+          command:
+          - /bin/bash
+          env:
+          - name: BITNAMI_DEBUG
+            value: "false"
+          - name: REDIS_REPLICATION_MODE
+            value: replica
+          - name: REDIS_MASTER_HOST
+            value: swift-redis-master-0.swift-redis-headless.default.svc.cluster.local
+          - name: REDIS_MASTER_PORT_NUMBER
+            value: "6379"
+          - name: ALLOW_EMPTY_PASSWORD
+            value: "yes"
+          - name: REDIS_TLS_ENABLED
+            value: "no"
+          - name: REDIS_PORT
+            value: "6379"
+          image: docker.io/bitnami/redis:7.2.4-debian-11-r5
+          imagePullPolicy: IfNotPresent
+          livenessProbe:
+            exec:
+              command:
+              - sh
+              - -c
+              - /health/ping_liveness_local_and_master.sh 5
+            failureThreshold: 5
+            initialDelaySeconds: 20
+            periodSeconds: 5
+            successThreshold: 1
+            timeoutSeconds: 6
+          name: redis
+          ports:
+          - containerPort: 6379
+            name: redis
+            protocol: TCP
+          readinessProbe:
+            exec:
+              command:
+              - sh
+              - -c
+              - /health/ping_readiness_local_and_master.sh 1
+            failureThreshold: 5
+            initialDelaySeconds: 20
+            periodSeconds: 5
+            successThreshold: 1
+            timeoutSeconds: 2
+          resources: {}
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            runAsGroup: 0
+            runAsNonRoot: true
+            runAsUser: 1001
+            seccompProfile:
+              type: RuntimeDefault
+          startupProbe:
+            failureThreshold: 22
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            successThreshold: 1
+            tcpSocket:
+              port: redis
+            timeoutSeconds: 5
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          volumeMounts:
+          - mountPath: /opt/bitnami/scripts/start-scripts
+            name: start-scripts
+          - mountPath: /health
+            name: health
+          - mountPath: /data
+            name: redis-data
+          - mountPath: /opt/bitnami/redis/mounted-etc
+            name: config
+          - mountPath: /opt/bitnami/redis/etc
+            name: redis-tmp-conf
+        dnsPolicy: ClusterFirst
+        enableServiceLinks: true
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext:
+          fsGroup: 1001
+          fsGroupChangePolicy: Always
+        serviceAccount: swift-redis-replica
+        serviceAccountName: swift-redis-replica
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - configMap:
+            defaultMode: 493
+            name: swift-redis-scripts
+          name: start-scripts
+        - configMap:
+            defaultMode: 493
+            name: swift-redis-health
+          name: health
+        - configMap:
+            defaultMode: 420
+            name: swift-redis-configuration
+          name: config
+        - emptyDir: {}
+          name: redis-tmp-conf
+    updateStrategy:
+      type: RollingUpdate
+    volumeClaimTemplates:
+    - apiVersion: v1
+      kind: PersistentVolumeClaim
+      metadata:
+        creationTimestamp: null
+        labels:
+          app.kubernetes.io/component: replica
+          app.kubernetes.io/instance: swift-redis
+          app.kubernetes.io/name: redis
+        name: redis-data
+      spec:
+        accessModes:
+        - ReadWriteOnce
+        resources:
+          requests:
+            storage: 8Gi
+        volumeMode: Filesystem
+      status:
+        phase: Pending
+  status:
+    availableReplicas: 1
+    collisionCount: 0
+    currentReplicas: 2
+    currentRevision: swift-redis-replicas-5556667c5b
+    observedGeneration: 2
+    readyReplicas: 1
+    replicas: 3
+    updateRevision: swift-redis-replicas-58fc894997
+    updatedReplicas: 1
+kind: List
+metadata:
+  resourceVersion: ""

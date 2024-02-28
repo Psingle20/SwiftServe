@@ -1,5 +1,0 @@
-6b79c4d49309182eb9fd7bb9cf3c99f95ebb08df830fce94e20e1d72896077af : Secret 
-4f5a2948ec333fa6fd7c05c09f9e6755 : acesss key
-https://2f23de4b98ddafd57ec70554794c0e1b.r2.cloudflarestorage.com :endpoint
-
-.\minio.exe server C:\minio --console-address :9001
