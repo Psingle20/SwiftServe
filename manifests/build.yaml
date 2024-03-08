@@ -24,5 +24,12 @@ spec:
       - image: shabbirdocks/swift-builds-stuff:3
         imagePullPolicy: IfNotPresent
         name: swift-builds-stuff
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "500m"
+            memory: "512Mi"
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
