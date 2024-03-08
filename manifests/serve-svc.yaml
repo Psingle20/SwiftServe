@@ -1,24 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  annotations:
-    cloud.google.com/neg: '{"ingress":true}'
-  creationTimestamp: "2024-02-15T13:40:06Z"
   labels:
     app: swiftserve-serving
   name: swiftserve-serving
   namespace: default
-  resourceVersion: "1364307"
-  uid: 0cf0f5d7-9c80-41ff-8495-37fb87596179
 spec:
-  clusterIP: 10.8.2.10
-  clusterIPs:
-  - 10.8.2.10
-  externalTrafficPolicy: Cluster
-  internalTrafficPolicy: Cluster
-  ipFamilies:
-  - IPv4
-  ipFamilyPolicy: SingleStack
   ports:
   - nodePort: 31425
     port: 8000
@@ -28,5 +15,3 @@ spec:
     app: swiftserve-serving
   sessionAffinity: None
   type: NodePort
-status:
-  loadBalancer: {}
